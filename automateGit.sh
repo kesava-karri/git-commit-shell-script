@@ -1,5 +1,5 @@
-echo "minus craic"
-echo "----------Start of script----------"
+echo "[from script] minus craic"
+echo "[from script]----------Start of script----------"
 
 #######################################
 # Samples of invoking the shell script
@@ -20,19 +20,19 @@ echo "----------Start of script----------"
 git add .
 
 if [[ $1 == "--date" ]]; then
-	echo "commit for the date:"
+	echo "[from script] commit for the date:"
 	message_string="$4"
-	echo "$2"
-	echo "with commit message:"
-	echo "$message_string"
+	echo "[from script] $2"
+	echo "[from script]with commit message:"
+	echo "[from script] $message_string"
 	git commit --date "$2" -m "$message_string"
 elif [[ $1 == "-m" ]]; then
 	message_string="$2"
 
-	echo "Regular commit w message: $message_string"
+	echo "[from script] Regular commit w message: $message_string"
 	git commit -m "message_string"
 fi
 
 git push origin main
 
-echo "----------End of script----------"
+echo "[from script]----------End of script----------"
