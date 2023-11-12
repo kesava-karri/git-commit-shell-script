@@ -30,7 +30,7 @@ elif [[ $1 == "-m" ]]; then
 	message_string="$2"
 
 	echo "[from script] Regular commit w message: $message_string"
-	git commit -m "message_string"
+	git commit -m "$message_string"
 fi
 
 git push origin main
